@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #071426;
+    color: #e2e8f0;
+}
+
+
+/* entête */
+
+header {
+    background: #020617;
+    height: 80px;
+    padding: 0 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+
+.logo {
+    color: #38bdf8;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+
+/* Partie accueil */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 60px 100px;
+}
+
+
+.hero-text {
+    width: 50%;
+}
+
+
+.hero-text h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+
+    color: #f8fafc;
+}
+
+
+.hero-text p {
+    font-size: 19px;
+    color: #94a3b8;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+/*Mwa ba animations*/
+
+.btn {
+
+    background: #0284c7;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 16px 35px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    display: inline-block;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+
+    background: #0369a1;
+
+    transform: translateY(-3px);
+
+}
+
+
+.hero img {
+
+    width: 420px;
+
+    animation: float 3s infinite ease-in-out;
+
+}
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* Partie service */
+
+.services {
+
+    padding: 80px 50px;
+
+    text-align: center;
+
+}
+
+
+.services h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 50px;
+
+    color: #f8fafc;
+
+}
+
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.card {
+
+    background: #0f2038;
+
+    width: 300px;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+
+    transition: 0.3s;
+
+    border: 1px solid #1e3a5f;
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #38bdf8;
+
+}
+
+
+.card h3 {
+
+    color: #38bdf8;
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+}
+
+
+.card p {
+
+    color: #94a3b8;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+/* partie programmeurs */
+
+.programmers {
+
+    background: #020617;
+
+    color: white;
+
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+
+.programmers h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.programmers p {
+
+    color: #94a3b8;
+
+    font-size: 18px;
+
+}
+
+
+
+
+/* Le bas de la page */
+
+footer {
+
+    background: #010409;
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+
+
+/* La fin */
+
+@media(max-width: 800px) {
+
+header {
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    height: auto;
+
+}
+
+
+nav {
+
+    margin-top: 15px;
+
+}
+
+
+.hero {
+
+    flex-direction: column;
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+}
+
+
+.hero-text {
+
+    width: 100%;
+
+}
+
+
+.hero-text h1 {
+
+    font-size: 38px;
+
+}
+
+
+.hero img {
+
+    width: 280px;
+
+    margin-top: 40px;
+
+}
+
+
+.cards {
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+}
+
+/*Parametres*/
+
+.settings {
+
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 100;
+
+}
+
+
+#settingsBtn {
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #0284c7;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+
+.settings-panel {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 70px;
+
+    width: 220px;
+
+    background: #0f2038;
+
+    color: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    display: none;
+
+    box-shadow: 0 10px 30px black;
+
+}
+
+
+
+.settings-panel button {
+
+    margin-top: 10px;
+
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+
+.settings.active .settings-panel {
+
+    display: block;
+
+}

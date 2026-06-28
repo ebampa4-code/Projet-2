@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+
+/* entête */
+
+header {
+    background: #0f172a;
+    height: 80px;
+    padding: 0 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+
+/* partie accueil */
+
+.hero {
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 60px 100px;
+}
+
+
+.hero-text {
+
+    width: 50%;
+
+}
+
+
+.hero-text h1 {
+
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+
+    color: #0f172a;
+
+}
+
+
+.hero-text p {
+
+    font-size: 19px;
+    color: #475569;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+
+}
+
+/*Mwa ba animations*/
+
+.btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 16px 35px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    display: inline-block;
+
+    transition: 0.3s;
+
+}
+
+
+.btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+
+}
+
+
+.hero img {
+
+    width: 420px;
+
+    animation: float 3s infinite ease-in-out;
+
+}
+
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+
+
+/* partie services */
+
+
+.services {
+
+    padding: 80px 50px;
+
+    text-align: center;
+
+}
+
+
+.services h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.card {
+
+    background: white;
+
+    width: 300px;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+.card h3 {
+
+    color: #2563eb;
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+}
+
+
+.card p {
+
+    color: #64748b;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+/* partie programmeurs */
+
+
+.programmers {
+
+    background: #0f172a;
+
+    color: white;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+}
+
+
+.programmers h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.programmers p {
+
+    color: #cbd5e1;
+
+    font-size: 18px;
+
+}
+
+
+
+
+/* Le bas de la page */
+
+
+footer {
+
+    background: #020617;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+
+/* La fin */
+
+
+@media(max-width: 800px) {
+
+
+header {
+
+    padding: 0 25px;
+
+    flex-direction: column;
+
+    height: auto;
+
+    padding: 20px;
+
+}
+
+
+nav {
+
+    margin-top: 15px;
+
+}
+
+
+.hero {
+
+    flex-direction: column;
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+}
+
+
+.hero-text {
+
+    width: 100%;
+
+}
+
+
+.hero-text h1 {
+
+    font-size: 38px;
+
+}
+
+
+.hero img {
+
+    width: 280px;
+
+    margin-top: 40px;
+
+}
+
+
+.cards {
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+}
+
+.settings {
+
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 100;
+
+}
+
+
+#settingsBtn {
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #0284c7;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+
+.settings-panel {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 70px;
+
+    width: 220px;
+
+    background: #0f2038;
+
+    color: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    display: none;
+
+    box-shadow: 0 10px 30px black;
+
+}
+
+
+
+.settings-panel button {
+
+    margin-top: 10px;
+
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+
+.settings.active .settings-panel {
+
+    display: block;
+
+}
+
+/*Petite modification pour le fond des cartes de programmeurs*/
+
+.dev-card{
+
+background:#000000;
+
+width:260px;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.3s;
+
+box-shadow:0 10px 30px #0005;
+
+}

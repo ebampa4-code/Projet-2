@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCommission - Souscription</title>
+
+    <link rel="stylesheet" href="../CSS/Souscription.css">
+
+    <link id="theme" rel="stylesheet" href="../CSS/Accueil_Sombre.css">
+</head>
+
+<body>
+
+    
+    <!--Themes activations-->
+<div class="settings">
+
+    <button id="settingsBtn">
+        ⚙
+    </button>
+
+
+    <div class="settings-panel" id="panel">
+
+        <h3>Paramètres</h3>
+
+        <p>Thème :</p>
+
+        <button onclick="Themesombre()">
+            🌙 Nuit
+        </button>
+
+        <button onclick="Themeclair()">
+            ☀️ Clair
+        </button>
+
+    </div>
+
+</div>
+
+<header>
+
+
+<div class="logo">
+    DevCommission
+</div>
+
+
+
+<nav>
+
+    <!-- Les liens dans la barre d'en-tête -->
+
+<a href="Connexion.html">
+Connectez-vous
+</a>
+<a href="Accueil.html">
+Accueil
+</a>
+
+
+<a href="Programmeurs.html">
+Programmeurs
+</a>
+
+
+<a href="Contact.html">
+Contact
+</a>
+
+
+</nav>
+
+
+</header>
+
+    <main>
+
+        <h1>Souscription</h1>
+        <p>Veillez remplir tous les champs ci-dessous</p>
+
+        <form id="Formulaire">
+
+            <!-- Email -->
+            <label for="email">mail</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="exemple@gmail.com"
+                required
+            >
+
+            <!-- Prénom -->
+            <label for="prenom">Prénom</label>
+            <input 
+                type="text" 
+                id="prenom" 
+                name="prenom" 
+                placeholder="Entrez votre prénom"
+                required
+            >
+
+            <!-- Nom -->
+            <label for="nom">Nom</label>
+            <input 
+                type="text" 
+                id="nom" 
+                name="nom" 
+                placeholder="Entrez votre nom"
+                required
+            >
+
+            <!-- Spécialisation -->
+            <label for="specialisation">Spécialisation</label>
+            <input 
+                type="text" 
+                id="specialisation" 
+                name="spécialisation"
+                placeholder="Exemple : Développement Web"
+                required
+            >
+
+            <!-- Compétences -->
+            <label for="competences">Compétences de programmeur</label>
+            <input 
+                type="text" 
+                id="competences" 
+                name="competences"
+                placeholder="Exemple : CSS / PHP / Python"
+                required
+            >
+
+            <!-- Mot de passe -->
+            <label for="password">Mot de passe</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password"
+                placeholder="Votre mot de passe"
+                required
+            >
+
+            <!-- Confirmation -->
+            <label for="confirm-password">Confirmer le mot de passe</label>
+            <input 
+                type="password" 
+                id="confirm-password" 
+                name="confirm-password"
+                placeholder="Confirmez votre mot de passe"
+                required
+            >
+
+            <button id="submit" type="submit">
+                Créer mon compte
+            </button>
+
+        </form>
+
+    </main>
+    <script src="../JS/Souscription.js"></script>
+    <script src="../JS/Parametre.js"></script>
+    
+</body>
+</html>

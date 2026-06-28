@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+body {
+
+    background: #071426;
+
+    color: #e2e8f0;
+
+    min-height: 100vh;
+
+}
+
+/* Thème */
+
+.settings{
+
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:100;
+
+}
+
+
+
+#settingsBtn{
+
+width:55px;
+height:55px;
+border-radius:50%;
+border:none;
+
+background:#0284c7;
+color:white;
+
+font-size:25px;
+cursor:pointer;
+
+}
+
+
+
+
+.settings-panel{
+
+display:none;
+
+position:absolute;
+right:0;
+bottom:65px;
+
+background:#020617;
+
+padding:20px;
+border-radius:15px;
+
+}
+
+
+
+.settings-panel.active{
+
+display:block;
+
+}
+
+
+/* Conteneur principal */
+
+main {
+
+    width: 450px;
+    background: #020617;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+    border: 1px solid #1e3a5f;
+    animation: appear 0.6s ease;
+    margin: 50px auto;
+}
+
+main p {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 30px; 
+}
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* entête */
+
+header {
+
+    background: #020617;
+
+    height: 80px;
+
+    padding: 0 80px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.logo {
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+    color: #38bdf8;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+nav a {
+
+    color: #e2e8f0;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: #38bdf8;
+
+}
+
+/* Titre */
+
+h1 {
+
+    text-align: center;
+
+    color: #38bdf8;
+
+    margin-bottom: 30px;
+
+    font-size: 35px;
+
+}
+
+
+
+/* Formulaire */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+
+label {
+
+    color: #f8fafc;
+
+    font-weight: 600;
+
+    margin-top: 10px;
+
+}
+
+
+
+input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    background: #0f2038;
+
+    border: 1px solid #1e3a5f;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+
+input::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+
+input:focus {
+
+    border-color: #38bdf8;
+
+    box-shadow: 0 0 12px rgba(56,189,248,0.25);
+
+}
+
+
+
+/* Bouton */
+
+form button {
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #0284c7;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+button:hover {
+
+    background: #0369a1;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* Version mobile */
+
+@media(max-width: 550px) {
+
+
+    main {
+
+        width: 90%;
+
+        padding: 30px 20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 30px;
+
+    }
+
+
+}
